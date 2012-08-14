@@ -1,0 +1,153 @@
+/* line 3, ../scss/resume.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 7, ../scss/resume.scss */
+body {
+  background-color: #666;
+  font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+  line-height: 1.5;
+  color: #151515;
+  padding: 1em 2em;
+  margin: 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 5px inset;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 5px inset;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 1px 5px inset;
+}
+
+/* line 18, ../scss/resume.scss */
+a {
+  color: #151515;
+  text-decoration: underline;
+}
+
+/* line 23, ../scss/resume.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+/* line 27, ../scss/resume.scss */
+h1 {
+  margin: 0;
+  padding: 0 .5em;
+}
+
+/* line 32, ../scss/resume.scss */
+.card {
+  padding: .5em 2em;
+  margin: 1em;
+  margin-bottom: 2em;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #B1B1B1;
+  position: relative;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 5px inset;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 5px inset;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 1px 5px inset;
+}
+
+/* line 42, ../scss/resume.scss */
+ul.card {
+  padding: 1em 2em;
+}
+
+/* line 46, ../scss/resume.scss */
+.group {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 5px inset;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 5px inset;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 1px 5px inset;
+  padding: 1em;
+  padding-bottom: .5em;
+  margin: 1em 0;
+  background-color: #969696;
+}
+/* line 53, ../scss/resume.scss */
+.group > h2 {
+  margin: 0;
+  padding: 0 .5em;
+}
+
+/* line 59, ../scss/resume.scss */
+#experience .summary {
+  padding-right: 40%;
+}
+
+/* line 63, ../scss/resume.scss */
+li.period {
+  display: block;
+  position: absolute;
+  right: 2em;
+  top: 1.8em;
+  font-style: italic;
+  line-height: .8;
+  text-align: center;
+}
+/* line 72, ../scss/resume.scss */
+li.period abbr,
+li.period span {
+  display: block;
+}
+
+/* line 81, ../scss/resume.scss */
+.skills h4 {
+  margin-bottom: .1em;
+}
+/* line 84, ../scss/resume.scss */
+.skills ul {
+  margin-top: 0;
+}
+/* line 87, ../scss/resume.scss */
+.skills li {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  line-height: 0;
+  white-space: nowrap;
+  border-right: 1px solid #151515;
+  margin: .5em;
+  padding: .5em;
+  padding-left: 0;
+  margin-left: 0;
+  margin-right: .2em;
+  margin-bottom: 0;
+}
+/* line 7, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+.skills li {
+  *display: inline;
+}
+/* line 98, ../scss/resume.scss */
+.skills li:nth-last-child(1) {
+  border-right: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+/* line 107, ../scss/resume.scss */
+#graduations ol {
+  list-style: none;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 109, ../scss/resume.scss */
+#graduations ol abbr {
+  float: left;
+  width: 10%;
+}
+/* line 113, ../scss/resume.scss */
+#graduations ol p {
+  float: left;
+  width: 90%;
+}
