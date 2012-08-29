@@ -1,11 +1,11 @@
-/* line 3, ../scss/resume.scss */
+/* line 4, ../scss/resume.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 7, ../scss/resume.scss */
+/* line 8, ../scss/resume.scss */
 body {
   background-color: #666;
   font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
@@ -18,24 +18,24 @@ body {
   box-shadow: rgba(0, 0, 0, 0.5) 0 1px 5px inset;
 }
 
-/* line 18, ../scss/resume.scss */
+/* line 19, ../scss/resume.scss */
 a {
   color: #151515;
   text-decoration: underline;
 }
 
-/* line 23, ../scss/resume.scss */
+/* line 24, ../scss/resume.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
-/* line 27, ../scss/resume.scss */
+/* line 28, ../scss/resume.scss */
 h1 {
   margin: 0;
   padding: 0 .5em;
 }
 
-/* line 32, ../scss/resume.scss */
+/* line 33, ../scss/resume.scss */
 .card {
   padding: .5em 2em;
   margin: 1em;
@@ -52,12 +52,12 @@ h1 {
   box-shadow: rgba(0, 0, 0, 0.5) 0 1px 5px inset;
 }
 
-/* line 42, ../scss/resume.scss */
+/* line 43, ../scss/resume.scss */
 ul.card {
   padding: 1em 2em;
 }
 
-/* line 46, ../scss/resume.scss */
+/* line 47, ../scss/resume.scss */
 .group {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -72,18 +72,18 @@ ul.card {
   margin: 1em 0;
   background-color: #969696;
 }
-/* line 53, ../scss/resume.scss */
+/* line 54, ../scss/resume.scss */
 .group > h2 {
   margin: 0;
   padding: 0 .5em;
 }
 
-/* line 59, ../scss/resume.scss */
-#experience .summary {
+/* line 60, ../scss/resume.scss */
+.experience .summary {
   padding-right: 40%;
 }
 
-/* line 63, ../scss/resume.scss */
+/* line 64, ../scss/resume.scss */
 li.period {
   display: block;
   position: absolute;
@@ -93,21 +93,21 @@ li.period {
   line-height: .8;
   text-align: center;
 }
-/* line 72, ../scss/resume.scss */
+/* line 73, ../scss/resume.scss */
 li.period abbr,
 li.period span {
   display: block;
 }
 
-/* line 81, ../scss/resume.scss */
+/* line 82, ../scss/resume.scss */
 .skills h4 {
   margin-bottom: .1em;
 }
-/* line 84, ../scss/resume.scss */
+/* line 85, ../scss/resume.scss */
 .skills ul {
   margin-top: 0;
 }
-/* line 87, ../scss/resume.scss */
+/* line 88, ../scss/resume.scss */
 .skills li {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
@@ -128,7 +128,7 @@ li.period span {
 .skills li {
   *display: inline;
 }
-/* line 98, ../scss/resume.scss */
+/* line 99, ../scss/resume.scss */
 .skills li:nth-last-child(1) {
   border-right: none;
   margin-right: 0;
@@ -136,18 +136,115 @@ li.period span {
 }
 
 /* line 107, ../scss/resume.scss */
-#graduations ol {
+ol.graduations {
   list-style: none;
-  overflow: hidden;
   *zoom: 1;
 }
 /* line 109, ../scss/resume.scss */
-#graduations ol abbr {
+ol.graduations abbr {
   float: left;
   width: 10%;
 }
 /* line 113, ../scss/resume.scss */
-#graduations ol p {
+ol.graduations p {
   float: left;
   width: 90%;
+}
+/* line 38, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+ol.graduations:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 120, ../scss/resume.scss */
+.languages:before {
+  content: "Languages";
+  right: 3%;
+  left: auto;
+}
+
+/* line 125, ../scss/resume.scss */
+.graduations:before {
+  content: "Graduations";
+  left: 77%;
+}
+
+/* line 129, ../scss/resume.scss */
+.exp-web-developer-bartenbach:before {
+  content: "Web Dev";
+  left: 67%;
+}
+
+/* line 133, ../scss/resume.scss */
+.exp-lead-developer-bartenbach:before {
+  content: "Lead Dev";
+  left: 56%;
+}
+
+/* line 137, ../scss/resume.scss */
+.exp-web-developer-yahoo:before {
+  content: "Web Dev";
+  left: 45%;
+}
+
+/* line 141, ../scss/resume.scss */
+.exp-front-end-engineer:before {
+  content: "FE";
+  left: 40%;
+}
+
+/* line 145, ../scss/resume.scss */
+.exp-prototyper:before {
+  content: "Prototyper";
+  left: 29%;
+}
+
+/* line 149, ../scss/resume.scss */
+.exp-senior-prototyper:before {
+  content: "Senior Prototyper";
+  left: 14%;
+}
+
+/* line 153, ../scss/resume.scss */
+.myskills:before {
+  content: "Skills";
+  left: 7%;
+}
+
+/* line 157, ../scss/resume.scss */
+.dirkginader:before {
+  content: "Me";
+  left: 3%;
+}
+
+/* line 162, ../scss/resume.scss */
+.card:before {
+  position: absolute;
+  top: -25px;
+  padding: 5px 10px 5px;
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -ms-border-top-left-radius: 10px;
+  -o-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -ms-border-top-right-radius: 10px;
+  -o-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: lightgrey;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 -2px 2px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 -2px 2px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 -2px 2px;
+}
+
+/* line 171, ../scss/resume.scss */
+#bottom-stack .card:before {
+  padding-bottom: 30px;
+}
+
+/* line 175, ../scss/resume.scss */
+#bottom-stack .card:hover:before {
+  top: -50px;
 }

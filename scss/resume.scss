@@ -1,4 +1,5 @@
 @import "compass";
+$max-stack-amount: 10;
 
 * {
 	@include box-sizing(border-box);
@@ -56,7 +57,7 @@ ul.card{
 	}
 }
 
-#experience .summary{
+.experience .summary{
 	padding-right: 40%;
 }
 
@@ -103,17 +104,87 @@ li.period{
 	}
 }
 
-#graduations{
-	ol{
-		list-style:none;
-		abbr{
-			float:left;
-			width:10%;
-		}
-		p{
-			float:left;
-			width:90%;
-		}
-		@include clearfix;
+ol.graduations{
+	list-style:none;
+	abbr{
+		float:left;
+		width:10%;
 	}
+	p{
+		float:left;
+		width:90%;
+	}
+	@include pie-clearfix;
 }
+
+.languages:before {
+   content: "Languages";
+   right:3%;
+   left:auto;
+}
+.graduations:before {
+   content: "Graduations";
+   left:77%;
+}
+.exp-web-developer-bartenbach:before {
+   content: "Web Dev";
+   left:67%;
+}
+.exp-lead-developer-bartenbach:before {
+   content: "Lead Dev";
+   left:56%;
+}
+.exp-web-developer-yahoo:before {
+   content: "Web Dev";
+   left:45%;
+}
+.exp-front-end-engineer:before {
+   content: "FE";
+   left:40%;
+}
+.exp-prototyper:before {
+   content: "Prototyper";
+   left:29%;
+}
+.exp-senior-prototyper:before {
+   content: "Senior Prototyper";
+   left:14%;
+}
+.myskills:before {
+   content: "Skills";
+   left:7%;
+}
+.dirkginader:before {
+   content: "Me";
+   left:3%;
+}
+
+.card:before{
+	position:absolute;
+	top:-25px;
+	//right:10px;
+	padding:5px 10px 5px;
+	@include border-top-radius(10px);
+	background-color:lightgrey;
+	@include box-shadow(rgba(black,0.3) 0 -2px 2px);
+}
+#bottom-stack .card:before{
+	padding-bottom:30px;
+}
+
+#bottom-stack .card:hover:before{
+	top:-50px;
+	//background-color:darkgrey;
+}
+
+// @for $i from 0 through 15 {
+// 	.card:nth-child( #{$i} ):before{
+// 		left: 10px * $i;
+// 	}
+// }
+// disguise
+// #{headings()}, 
+// li, p, a, dt, dd, abbr{
+// 	background-color:#151515;
+// }
+

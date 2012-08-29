@@ -1,0 +1,148 @@
+/* line 8, ../scss/stack-scroll.scss */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* line 15, ../scss/stack-scroll.scss */
+.scroll {
+  width: 100%;
+  height: 100%;
+  padding: 0 1em;
+  overflow: auto;
+}
+
+/* line 34, ../scss/stack-scroll.scss */
+#bottom-stack {
+  bottom: 50px;
+  width: 100%;
+  padding-left: 2em;
+  padding-right: 2em;
+  position: absolute;
+}
+/* line 40, ../scss/stack-scroll.scss */
+#bottom-stack .card {
+  top: 0;
+  position: absolute;
+  display: none;
+  right: 2em;
+  left: 2em;
+  -webkit-transition-property: top;
+  -moz-transition-property: top;
+  -ms-transition-property: top;
+  -o-transition-property: top;
+  transition-property: top;
+}
+/* line 47, ../scss/stack-scroll.scss */
+#bottom-stack .card.in {
+  display: block;
+}
+/* line 51, ../scss/stack-scroll.scss */
+#bottom-stack .card.in:nth-last-child(1) {
+  top: -3px;
+  z-index: 99;
+}
+/* line 51, ../scss/stack-scroll.scss */
+#bottom-stack .card.in:nth-last-child(2) {
+  top: -6px;
+  z-index: 98;
+}
+/* line 51, ../scss/stack-scroll.scss */
+#bottom-stack .card.in:nth-last-child(3) {
+  top: -9px;
+  z-index: 97;
+}
+/* line 51, ../scss/stack-scroll.scss */
+#bottom-stack .card.in:nth-last-child(4) {
+  top: -12px;
+  z-index: 96;
+}
+/* line 51, ../scss/stack-scroll.scss */
+#bottom-stack .card.in:nth-last-child(5) {
+  top: -15px;
+  z-index: 95;
+}
+/* line 51, ../scss/stack-scroll.scss */
+#bottom-stack .card.in:nth-last-child(6) {
+  top: -18px;
+  z-index: 94;
+}
+/* line 51, ../scss/stack-scroll.scss */
+#bottom-stack .card.in:nth-last-child(7) {
+  top: -21px;
+  z-index: 93;
+}
+/* line 51, ../scss/stack-scroll.scss */
+#bottom-stack .card.in:nth-last-child(8) {
+  top: -24px;
+  z-index: 92;
+}
+/* line 51, ../scss/stack-scroll.scss */
+#bottom-stack .card.in:nth-last-child(9) {
+  top: -27px;
+  z-index: 91;
+}
+/* line 51, ../scss/stack-scroll.scss */
+#bottom-stack .card.in:nth-last-child(10) {
+  top: -30px;
+  z-index: 90;
+}
+
+/* line 58, ../scss/stack-scroll.scss */
+.stack {
+  position: absolute;
+  width: 100%;
+}
+/* line 61, ../scss/stack-scroll.scss */
+.stack .card {
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -ms-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  transition-duration: 0s;
+  margin: 0 3em;
+  position: absolute;
+  display: none;
+}
+/* line 66, ../scss/stack-scroll.scss */
+.stack .card.in {
+  display: block;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+}
+
+/* line 73, ../scss/stack-scroll.scss */
+.card {
+  margin: 3em;
+  background-color: lightgrey;
+  border: none;
+  padding: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+/* line 79, ../scss/stack-scroll.scss */
+.card.bottom {
+  visibility: hidden;
+}
+/* line 82, ../scss/stack-scroll.scss */
+.card.top {
+  visibility: hidden;
+}
+
+/* line 87, ../scss/stack-scroll.scss */
+.card p:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+/* line 90, ../scss/stack-scroll.scss */
+.card p:nth-child(1) {
+  margin-top: 0;
+}

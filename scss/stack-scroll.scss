@@ -1,0 +1,92 @@
+$max-stack-amount: 10;
+$max-z-index:100;
+$stacked-card-gap:3px;
+
+@import "compass";
+
+html,
+body{
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+.scroll{
+	width:100%;
+	height:100%;
+	padding:0 1em;
+	overflow:auto;
+}
+// #top-stack{
+// 	top:0;
+// 	.card{
+// 		bottom:0;
+// 		@include transition-property(bottom);
+// 		@for $i from 1 through $max-stack-amount {
+// 			&.in:nth-child( #{$i} ) {
+// 				bottom:-$stacked-card-gap*$i;
+// 				z-index:$max-z-index - $i;
+// 			}
+// 		}
+// 	}
+// }
+#bottom-stack{
+	bottom:50px;
+	width:100%;
+	padding-left:2em;
+	padding-right:2em;
+	position:absolute;
+	.card{
+		top:0;
+		position:absolute;
+		display:none;
+		right:2em;
+		left:2em;
+		@include transition-property(top);
+		&.in{
+			display:block;
+		}
+		@for $i from 1 through $max-stack-amount {
+			&.in:nth-last-child( #{$i} ) {
+				top:-$stacked-card-gap*$i;
+				z-index:$max-z-index - $i;
+			}
+		}
+	}
+}
+.stack{
+	position:absolute;
+	width:100%;
+	.card{
+		@include transition-duration(0s);
+		margin: 0 3em;
+		position:absolute;
+		display:none;
+		&.in{
+			display:block;
+			@include single-box-shadow;
+		}
+	}
+}
+
+.card{
+	margin: 3em;
+	background-color:lightgrey;
+	border:none;
+	padding:10px;
+	@include border-radius(10px);
+	&.bottom{
+		visibility:hidden;
+	}
+	&.top{
+		visibility:hidden;
+	}
+}
+
+.card p:nth-last-child(1){
+	margin-bottom:0;
+}
+.card p:nth-child(1){
+	margin-top:0;
+}
