@@ -1,11 +1,9 @@
-/* line 4, ../scss/resume.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 8, ../scss/resume.scss */
 body {
   background-color: #666;
   font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
@@ -18,24 +16,20 @@ body {
   box-shadow: rgba(0, 0, 0, 0.5) 0 1px 5px inset;
 }
 
-/* line 19, ../scss/resume.scss */
 a {
   color: #151515;
   text-decoration: underline;
 }
 
-/* line 24, ../scss/resume.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
-/* line 28, ../scss/resume.scss */
 h1 {
   margin: 0;
   padding: 0 .5em;
 }
 
-/* line 33, ../scss/resume.scss */
 .card {
   padding: .5em 2em;
   margin: 1em;
@@ -52,12 +46,10 @@ h1 {
   box-shadow: rgba(0, 0, 0, 0.5) 0 1px 5px inset;
 }
 
-/* line 43, ../scss/resume.scss */
 ul.card {
   padding: 1em 2em;
 }
 
-/* line 47, ../scss/resume.scss */
 .group {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -72,18 +64,15 @@ ul.card {
   margin: 1em 0;
   background-color: #969696;
 }
-/* line 54, ../scss/resume.scss */
 .group > h2 {
   margin: 0;
   padding: 0 .5em;
 }
 
-/* line 60, ../scss/resume.scss */
 .experience .summary {
   padding-right: 40%;
 }
 
-/* line 64, ../scss/resume.scss */
 li.period {
   display: block;
   position: absolute;
@@ -93,21 +82,17 @@ li.period {
   line-height: .8;
   text-align: center;
 }
-/* line 73, ../scss/resume.scss */
 li.period abbr,
 li.period span {
   display: block;
 }
 
-/* line 82, ../scss/resume.scss */
 .skills h4 {
   margin-bottom: .1em;
 }
-/* line 85, ../scss/resume.scss */
 .skills ul {
   margin-top: 0;
 }
-/* line 88, ../scss/resume.scss */
 .skills li {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
@@ -124,101 +109,84 @@ li.period span {
   margin-right: .2em;
   margin-bottom: 0;
 }
-/* line 7, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
 .skills li {
   *display: inline;
 }
-/* line 99, ../scss/resume.scss */
 .skills li:nth-last-child(1) {
   border-right: none;
   margin-right: 0;
   padding-right: 0;
 }
 
-/* line 107, ../scss/resume.scss */
 ol.graduations {
   list-style: none;
   *zoom: 1;
 }
-/* line 109, ../scss/resume.scss */
 ol.graduations abbr {
   float: left;
   width: 10%;
 }
-/* line 113, ../scss/resume.scss */
 ol.graduations p {
   float: left;
   width: 90%;
 }
-/* line 38, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 ol.graduations:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 120, ../scss/resume.scss */
 .languages:before {
   content: "Languages";
   right: 3%;
   left: auto;
 }
 
-/* line 125, ../scss/resume.scss */
 .graduations:before {
   content: "Graduations";
   left: 77%;
 }
 
-/* line 129, ../scss/resume.scss */
 .exp-web-developer-bartenbach:before {
-  content: "Web Dev";
-  left: 67%;
+  content: "02/1997";
+  left: 68%;
 }
 
-/* line 133, ../scss/resume.scss */
 .exp-lead-developer-bartenbach:before {
-  content: "Lead Dev";
-  left: 56%;
+  content: "01/2001";
+  left: 58%;
 }
 
-/* line 137, ../scss/resume.scss */
 .exp-web-developer-yahoo:before {
-  content: "Web Dev";
-  left: 45%;
+  content: "08/2007";
+  left: 48%;
 }
 
-/* line 141, ../scss/resume.scss */
 .exp-front-end-engineer:before {
-  content: "FE";
-  left: 40%;
+  content: "08/2009";
+  left: 38%;
 }
 
-/* line 145, ../scss/resume.scss */
 .exp-prototyper:before {
-  content: "Prototyper";
+  content: "06/2011";
   left: 29%;
 }
 
-/* line 149, ../scss/resume.scss */
 .exp-senior-prototyper:before {
-  content: "Senior Prototyper";
-  left: 14%;
+  content: "01/2013";
+  left: 19%;
 }
 
-/* line 153, ../scss/resume.scss */
+.exp-google-prototyper:before {
+  content: "Current";
+  left: 10%;
+}
+
 .myskills:before {
   content: "Skills";
-  left: 7%;
-}
-
-/* line 157, ../scss/resume.scss */
-.dirkginader:before {
-  content: "Me";
   left: 3%;
 }
 
-/* line 162, ../scss/resume.scss */
 .card:before {
   position: absolute;
   top: -25px;
@@ -239,12 +207,10 @@ ol.graduations:after {
   box-shadow: rgba(0, 0, 0, 0.3) 0 -2px 2px;
 }
 
-/* line 171, ../scss/resume.scss */
 #bottom-stack .card:before {
   padding-bottom: 30px;
 }
 
-/* line 175, ../scss/resume.scss */
 #bottom-stack .card:hover:before {
   top: -50px;
 }

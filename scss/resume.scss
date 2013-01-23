@@ -127,37 +127,43 @@ ol.graduations{
    left:77%;
 }
 .exp-web-developer-bartenbach:before {
-   content: "Web Dev";
-   left:67%;
+   content: "02/1997";
+   left:68%;
 }
 .exp-lead-developer-bartenbach:before {
-   content: "Lead Dev";
-   left:56%;
+   content: "01/2001";
+   left:58%;
 }
 .exp-web-developer-yahoo:before {
-   content: "Web Dev";
-   left:45%;
+   content: "08/2007";
+   left:48%;
 }
 .exp-front-end-engineer:before {
-   content: "FE";
-   left:40%;
+   content: "08/2009";
+   left:38%;
 }
 .exp-prototyper:before {
-   content: "Prototyper";
+   content: "06/2011";
    left:29%;
 }
 .exp-senior-prototyper:before {
-   content: "Senior Prototyper";
-   left:14%;
+   content: "01/2013";
+   left:19%;
 }
+
+.exp-google-prototyper:before {
+   content: "Current";
+   left:10%;
+}
+
 .myskills:before {
    content: "Skills";
-   left:7%;
-}
-.dirkginader:before {
-   content: "Me";
    left:3%;
 }
+// .dirkginader:before {
+//    content: "Me";
+//    left:3%;
+// }
 
 .card:before{
 	position:absolute;
