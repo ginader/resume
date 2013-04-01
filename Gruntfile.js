@@ -42,7 +42,8 @@ module.exports = function(grunt) {
           require:true
         }
       },
-      files: [ 'Gruntfile.js','js/stack-scroll.js']
+      files: [ /*'Gruntfile.js',*/ 'js/stack-scroll.js']
+      // Gruntfile doesn't Lint right now because of connect.static()
     },
 
     compass: {
