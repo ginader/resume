@@ -22,6 +22,7 @@ module.exports = function(grunt) {
       ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
       ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> \n */\n',
 
+    // setup jshint to behave
     jshint: {
       options: {
         curly: true,
@@ -44,6 +45,7 @@ module.exports = function(grunt) {
       files: [ 'Gruntfile.js', 'js/stack-scroll.js']
     },
 
+    // setup Compass/Sass to load from existing config.rb
     compass: {
       dist: {
         options: {
@@ -52,10 +54,12 @@ module.exports = function(grunt) {
       }
     },
 
+    // setup livereload server
     livereload: {
       port: 35729 // Default livereload listening port.
     },
 
+    // setup demo server for livereload
     connect: {
       livereload: {
         options: {
@@ -67,19 +71,21 @@ module.exports = function(grunt) {
       }
     },
 
-
+    // load destination and host
     connection: grunt.file.readJSON('connection.json'),
+    // define how and what rsync deploys
     rsync: {
       deploy: {
           src: "./",
-          dest: '<%= connection.dest %>',
-          host: '<%= connection.host %>',
+          dest: '<%= connection.dest %>', // i.e. "/var/www"
+          host: '<%= connection.host %>', // i.e. "user@server.com"
           recursive: true,
           syncDest: false,
           exclude: ["/node_modules", ".*"]
       }
     },
 
+    // a different "watch" task that is preferred by livereload
     regarde: {
       js: {
         files: '**/*.js',
@@ -95,11 +101,18 @@ module.exports = function(grunt) {
   });
 
 
+  // $ grunt server 
+  // used for dev. Will trigger livereload on scss and js change
   grunt.registerTask('server', ['livereload-start', 'connect', 'regarde']);
-  grunt.registerTask('deploy', ['rsync']);
+  // $ grunt deploy
+  // recompiles and pushes current version to production server
+  grunt.registerTask('deploy', ['jshint', 'compass', 'rsync']);
+  // $ grunt
+  // test js and recompile Sass
   grunt.registerTask('default', ['jshint', 'compass']);
 
 
+  // load required tasks
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
