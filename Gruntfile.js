@@ -4,8 +4,7 @@ var path = require('path');
 var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
 
 var folderMount = function folderMount(connect, point) {
-  return connect.static(path.resolve(point));
-  //return connect.use(connect['static'](path.resolve(point)));
+  return connect['static'](path.resolve(point));
 };
 /* end setup connect for livereload */
 
@@ -42,8 +41,7 @@ module.exports = function(grunt) {
           require:true
         }
       },
-      files: [ /*'Gruntfile.js',*/ 'js/stack-scroll.js']
-      // Gruntfile doesn't Lint right now because of connect.static()
+      files: [ 'Gruntfile.js', 'js/stack-scroll.js']
     },
 
     compass: {
