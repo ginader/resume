@@ -67,11 +67,13 @@ module.exports = function(grunt) {
       }
     },
 
+
+    connection: grunt.file.readJSON('connection.json'),
     rsync: {
       deploy: {
           src: "./",
-          dest: "~/resume.ginader.com",
-          host: "ssh-153524-ginader@ginader.com",
+          dest: '<%= connection.dest %>',
+          host: '<%= connection.host %>',
           recursive: true,
           syncDest: false,
           exclude: ["/node_modules", ".*"]
