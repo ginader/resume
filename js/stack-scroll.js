@@ -1,17 +1,17 @@
 YUI().use('node','event', 'anim', function (Y) {
 	function stackScroll(){
 		Y.log('stackScroll()');
-		var isScrolled = false;
+		//var isScrolled = false;
 		var content = Y.one('.scroll');
 		var bottom = Y.one('#bottom-stack').setHTML('');
 		bottom.setHTML('');
-		var top = Y.one('#top-stack');
+		//var top = Y.one('#top-stack');
 		var cards = content.all('.card');
 		var cardCount = cards.size();
 		var breakpoints = {};
 		var maxY = content.get('offsetHeight');
 		var stackedCardGap = 3; // analog to $stacked-card-gap:25px; in card-scroll.scss
-		
+
 		Y.log('cardCount:'+cardCount);
 
 		cards.each(function(node, idx){
@@ -37,15 +37,6 @@ YUI().use('node','event', 'anim', function (Y) {
 		});
 
 		bottom.all('[id]').removeAttribute('id');
-		// bottom.all('[id]').each(function() {
-		// 	var key = this.getAttribute('id');
-		// 	if(!key){
-		// 		key = this.get('parentNode').getAttribute('id');
-		// 	}
-		// 	Y.log(key);
-		// 	this.setData('key', this.getAttribute('id'));
-		// 	this.removeAttribute('id');
-		// });
 		bottom.delegate('click', function(e){
 			Y.log('click');
 			Y.log(e.currentTarget.getData('key'));
@@ -54,15 +45,15 @@ YUI().use('node','event', 'anim', function (Y) {
 			var position = e.currentTarget.getData('pos');
 			//Y.one('#'+e.currentTarget.getData('key')).scrollIntoView(true);
 			var anim = new Y.Anim({
-		        node: content,
-		        to: {
-		            scroll: function(node) {
-		                return [0, position]
-		            }
-		        },
-		        easing: Y.Easing.easeOut
-		    });
-    		anim.run();
+				node: node,
+				to: {
+					scroll: function() {
+						return [0, position];
+					}
+				},
+				easing: Y.Easing.easeOut
+			});
+			anim.run();
 		}, '.card');
 
 		//Y.log(breakpoints);
@@ -70,7 +61,7 @@ YUI().use('node','event', 'anim', function (Y) {
 		var checkscrolled = function () {
 			var scrolled = content.get('scrollTop');
 			var enter = scrolled + maxY;
-			var exit = scrolled;
+			//var exit = scrolled;
 			Y.Object.each(breakpoints, function(o,y){
 				if(enter - ((cardCount - o.idx)*stackedCardGap) > y){
 					//Y.log('content: '+y);
@@ -88,7 +79,7 @@ YUI().use('node','event', 'anim', function (Y) {
 					o.bottomClone.addClass('in');
 				}
 			});
-		}
+		};
 		checkscrolled(); // once initially in case the page is already scrolled down
 
 		content.on('scroll', checkscrolled);
