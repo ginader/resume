@@ -86,5 +86,5 @@ YUI().use('node','event', 'anim', function (Y) {
 	}
 	stackScroll();
 	Y.on("windowresize", stackScroll);
-});	
+});
 
