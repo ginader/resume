@@ -53,6 +53,7 @@ module.exports = function(grunt) {
           cssDir: 'css',
           environment: 'production',
           outputStyle: 'compressed',
+          force:true, // force a recompile of all files (so all of them are compressed for deploy)
           noLineComments: true
         }
       },
@@ -66,9 +67,6 @@ module.exports = function(grunt) {
         }
       }
     },
-
-    // delete all the files in the css folder to force recompile of all scss files for production
-    clean: ["css"],
 
     // setup livereload server
     livereload: {
@@ -119,10 +117,10 @@ module.exports = function(grunt) {
 
   // $ grunt server 
   // used for dev. Will trigger livereload on scss and js change
-  grunt.registerTask('server', ['livereload-start', 'clean', 'connect', 'regarde']);
+  grunt.registerTask('server', ['livereload-start', 'connect', 'regarde']);
   // $ grunt deploy
   // recompiles and pushes current version to production server
-  grunt.registerTask('deploy', ['jshint', 'clean', 'compass:dist', 'rsync']);
+  grunt.registerTask('deploy', ['jshint', 'compass:dist', 'rsync']);
   // $ grunt
   // test js and recompile Sass
   grunt.registerTask('default', ['jshint', 'compass']);
@@ -136,6 +134,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-livereload');
   grunt.loadNpmTasks("grunt-rsync");
-  grunt.loadNpmTasks('grunt-contrib-clean');
 
 };
