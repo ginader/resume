@@ -45,14 +45,30 @@ module.exports = function(grunt) {
       files: [ 'Gruntfile.js', 'js/stack-scroll.js']
     },
 
-    // setup Compass/Sass to load from existing config.rb
+// configure Sass/Compass for production (dist) and development (dev)
     compass: {
       dist: {
         options: {
-          config: 'config.rb'
+          sassDir: 'scss',
+          cssDir: 'css',
+          environment: 'production',
+          outputStyle: 'compressed',
+          noLineComments: true
+        }
+      },
+      dev: {
+        options: {
+          sassDir: 'scss',
+          cssDir: 'css',
+          outputStyle: 'expanded',
+          debugInfo: true, // write source map info: http://bricss.net/post/33788072565/using-sass-source-maps-in-webkit-inspector
+          noLineComments: false
         }
       }
     },
+
+    // delete all the files in the css folder to force recompile of all scss files for production
+    clean: ["css"],
 
     // setup livereload server
     livereload: {
@@ -95,7 +111,7 @@ module.exports = function(grunt) {
       css: {
         files: '**/*.scss',
         events: true,
-        tasks: ['compass', 'livereload']
+        tasks: ['compass:dev', 'livereload']
       }
     }
   });
@@ -103,10 +119,10 @@ module.exports = function(grunt) {
 
   // $ grunt server 
   // used for dev. Will trigger livereload on scss and js change
-  grunt.registerTask('server', ['livereload-start', 'connect', 'regarde']);
+  grunt.registerTask('server', ['livereload-start', 'clean', 'connect', 'regarde']);
   // $ grunt deploy
   // recompiles and pushes current version to production server
-  grunt.registerTask('deploy', ['jshint', 'compass', 'rsync']);
+  grunt.registerTask('deploy', ['jshint', 'clean', 'compass:dist', 'rsync']);
   // $ grunt
   // test js and recompile Sass
   grunt.registerTask('default', ['jshint', 'compass']);
@@ -120,5 +136,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-livereload');
   grunt.loadNpmTasks("grunt-rsync");
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
 };
