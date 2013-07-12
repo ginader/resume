@@ -1,6 +1,6 @@
 YUI().use('node','event', 'anim', function (Y) {
 	function stackScroll(){
-		Y.log('stackScroll()');
+		//Y.log('stackScroll()');
 		//var isScrolled = false;
 		var content = Y.one('.scroll');
 		var bottom = Y.one('#bottom-stack').setHTML('');
@@ -12,11 +12,11 @@ YUI().use('node','event', 'anim', function (Y) {
 		var maxY = content.get('offsetHeight');
 		var stackedCardGap = 3; // analog to $stacked-card-gap:25px; in card-scroll.scss
 
-		Y.log('cardCount:'+cardCount);
+		//Y.log('cardCount:'+cardCount);
 
 		cards.each(function(node, idx){
 			var clone = node.cloneNode(true).appendTo(bottom); // duplicate the cards into the top and bottom stack
-			Y.log(clone.get("nodeName"));
+			//Y.log(clone.get("nodeName"));
 			var position = node.getXY()[1];
 			breakpoints[position] = {
 				'idx' : idx,
@@ -28,19 +28,19 @@ YUI().use('node','event', 'anim', function (Y) {
 			};
 			var key = node.getAttribute('id');
 			if(!key){
-				Y.log(node.get('parentNode').get("nodeName"));
+				//Y.log(node.get('parentNode').get("nodeName"));
 				key = node.get('parentNode').getAttribute('id');
 			}
-			Y.log(key);
+			//Y.log(key);
 			clone.setData('key', key);
 			clone.setData('pos',position-40);
 		});
 
 		bottom.all('[id]').removeAttribute('id');
 		bottom.delegate('click', function(e){
-			Y.log('click');
-			Y.log(e.currentTarget.getData('key'));
-			Y.log(e.currentTarget.getData('pos'));
+			//Y.log('click');
+			//Y.log(e.currentTarget.getData('key'));
+			//Y.log(e.currentTarget.getData('pos'));
 			var node = Y.one('#'+e.currentTarget.getData('key'));
 			var position = e.currentTarget.getData('pos');
 			//Y.one('#'+e.currentTarget.getData('key')).scrollIntoView(true);
